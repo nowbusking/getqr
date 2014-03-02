@@ -6,17 +6,18 @@ from flask import Flask
 from flask import redirect
 from flask import request
 from flask import send_file
-
+from PIL import Image
 import qrcode
 from qrcode.image.pil import PilImage
 
 
 app = Flask(__name__)
+app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 60 * 60 * 24 * 7
 
 
 def serve_pil_image(pil_img):
     img_io = StringIO()
-    pil_img.save(img_io)
+    pil_img.save(img_io, format='png')
     img_io.seek(0)
     return send_file(img_io, mimetype='image/png')
 
@@ -57,9 +58,12 @@ def get_qrcode():
     )
     qr.add_data(data)
     qr.make(fit=True)
-    img = qr.make_image(image_factory=PilImage)
-    img._img.thumbnail((width, height))
-    return serve_pil_image(img)
+    qr_image = qr.make_image(image_factory=PilImage)
+    qr_image._img.thumbnail((width, height))
+    final = Image.new('RGBA', (width, height), (255, 255, 255, 255))
+    final.paste(qr_image._img, ((width - qr_image._img.size[0]) / 2,
+                                (height - qr_image._img.size[1]) / 2))
+    return serve_pil_image(final)
 
 
 if __name__ == "__main__":

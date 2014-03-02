@@ -7,6 +7,8 @@ It is [Google Chart Tool](https://developers.google.com/chart/infographics/docs/
 Syntax
 ------
 
+**Root URL: ** `http://getqr.herokuapp.com/qr`
+
 <table cellspacing="code" cellpadding="1">
 <tr>
   <th scope="col">Parameter</th>
@@ -54,3 +56,9 @@ Syntax
   </td>
 </tr>
 </table>
+
+
+Example
+-------
+
+![Example](http://getqr.herokuapp.com/qr?chl=test&chs=200x200)

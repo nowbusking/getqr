@@ -3,6 +3,7 @@ from StringIO import StringIO
 
 from flask import abort
 from flask import Flask
+from flask import redirect
 from flask import request
 from flask import send_file
 
@@ -20,7 +21,12 @@ def serve_pil_image(pil_img):
     return send_file(img_io, mimetype='image/png')
 
 
-@app.route("/")
+@app.route('/')
+def hello():
+    return redirect('http://github.com/spoqa/getqr')
+
+
+@app.route("/qr")
 def get_qrcode():
     try:
         chs = request.args['chs']

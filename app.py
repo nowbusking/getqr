@@ -1,4 +1,4 @@
-    # -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 from StringIO import StringIO
 
 from flask import abort
@@ -26,11 +26,11 @@ def hello():
     return redirect('http://github.com/spoqa/getqr')
 
 
-@app.route("/qr")
+@app.route("/qr", methods=['GET', 'POST'])
 def get_qrcode():
     try:
-        chs = request.args['chs']
-        data = request.args['chl']
+        chs = request.values['chs']
+        data = request.values['chl']
         width, height = (int(x) for x in chs.split('x'))
     except KeyError:
         abort(400)
@@ -42,8 +42,8 @@ def get_qrcode():
 
     eclv = 'L'
     margin = 4
-    if 'chld' in request.args:
-        chld = request.args['chld'].split('|')
+    if 'chld' in request.values:
+        chld = request.values['chld'].split('|')
         eclv = chld[0]
         if len(chld) == 2:
             margin = chld[1]

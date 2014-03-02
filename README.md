@@ -7,7 +7,7 @@ It is [Google Chart Tool](https://developers.google.com/chart/infographics/docs/
 Syntax
 ------
 
-**Root URL: ** `http://getqr.herokuapp.com/qr`
+Root URL: `http://getqr.herokuapp.com/qr`
 
 <table cellspacing="code" cellpadding="1">
 <tr>
@@ -61,4 +61,4 @@ Syntax
 Example
 -------
 
-![Example](http://getqr.herokuapp.com/qr?chl=test&chs=200x200)
+![Example](http://getqr.herokuapp.com/qr?chl=Hello+World&chs=200x200)

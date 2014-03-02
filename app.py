@@ -53,7 +53,7 @@ def get_qrcode():
         version=None,
         error_correction=ec,
         box_size=10,
-        border=4
+        border=margin
     )
     qr.add_data(data)
     qr.make(fit=True)

@@ -61,4 +61,4 @@ Root URL: `http://getqr.herokuapp.com/qr`
 Example
 -------
 
-![Example](http://getqr.herokuapp.com/qr?chl=test&chs=200x200)
+![Example](http://getqr.herokuapp.com/qr?chl=Hello+World&chs=200x200)

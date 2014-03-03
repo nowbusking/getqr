@@ -67,4 +67,9 @@ def get_qrcode():
 
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', debug=True)
+    host = os.environ.get('HOST', '0.0.0.0')
+    port = int(os.environ.get('PORT', 5000))
+    debug = bool(os.environ.get('DEBUG', 0))
+
+    app.run(host=host, port=port, debug=debug)
+

@@ -9,7 +9,7 @@ from flask import send_file
 from PIL import Image
 import qrcode
 from qrcode.image.pil import PilImage
-
+import os
 
 app = Flask(__name__)
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 60 * 60 * 24 * 7

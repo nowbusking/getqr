@@ -1,6 +1,6 @@
 {
   "name": "Getqr",
-  "description": "TODO: Add a short description about Getqr",
+  "description": "Web-based QR code generator.",
   "keywords": [
     "small",
     "sharp",

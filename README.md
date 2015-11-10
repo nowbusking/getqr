@@ -1,4 +1,4 @@
-getqr
+getqr [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 =====
 
 Web-based [QR code](http://en.wikipedia.org/wiki/QR_code) generator.

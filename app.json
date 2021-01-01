@@ -6,6 +6,7 @@
     "sharp",
     "tool"
   ],
+  "repository": "https://github.com/spoqa/getqr",
   "addons": [],
   "env": {}
 }

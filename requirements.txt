@@ -1,5 +1,5 @@
 Flask==1.0
-Pillow==6.2.0
+Pillow==9.0.1
 gunicorn==19.5.0
 qrcode==4.0.4
 six==1.5.2

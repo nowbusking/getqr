@@ -27,7 +27,7 @@ def serve_pil_image(pil_img):
 
 @app.route('/')
 def hello():
-    return redirect('http://github.com/spoqa/getqr')
+    return redirect('http://github.com/nowbusking/getqr')
 
 
 @app.route("/qr", methods=['GET', 'POST'])

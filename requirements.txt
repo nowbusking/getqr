@@ -1,4 +1,4 @@
-Flask==1.0
+Flask==2.3.2
 Pillow==6.2.0
 gunicorn==19.5.0
 qrcode==4.0.4
